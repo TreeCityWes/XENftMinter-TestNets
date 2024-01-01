@@ -84,7 +84,7 @@ def create_ui(send_transactions_callback, stop_transactions_callback, toggle_key
     network_var = StringVar(root)
     network_var.set('Ethereum')  # Set default value
 
-    networks = ['Ethereum', 'BSC', 'Polygon', 'Avalanche C', 'Ethereum PoW', 'Moonbeam', 'Evmos', 'Fantom']  # Add more networks here if needed
+    networks = ['Fastnet', 'Devnet']  # Add more networks here if needed
     network_dropdown = OptionMenu(root, network_var, *networks)
     network_dropdown.grid(row=6, column=3, padx=padding_x, pady=padding_y)
     network_dropdown.config(bg='white')
@@ -153,20 +153,20 @@ def update_inputs(*args):
         contract_address_entry.insert(0, '0x06450dEe7FD2Fb8E39061434BAbCFC05599a6Fb8')
         chain_id_entry.delete(0, END)
         chain_id_entry.insert(0, '1')
-    elif selected_network == 'BSC':
+    elif selected_network == 'Fastnet':
         eth_node_url_entry.delete(0, END)
-        eth_node_url_entry.insert(0, 'https://bsc-dataseed.binance.org/')
+        eth_node_url_entry.insert(0, 'https://x1-fastnet.infrafc.org')
         contract_address_entry.delete(0, END)
-        contract_address_entry.insert(0, '0x1Ac17FFB8456525BfF46870bba7Ed8772ba063a5')
+        contract_address_entry.insert(0, '0xd638e3657a4000b944AC517BD3aFe2Ba964E3B92')
         chain_id_entry.delete(0, END)
-        chain_id_entry.insert(0, '56')
-    elif selected_network == 'Polygon':
+        chain_id_entry.insert(0, '4003')
+    elif selected_network == 'Devnet':
         eth_node_url_entry.delete(0, END)
-        eth_node_url_entry.insert(0, 'https://rpc-mainnet.maticvigil.com/')
+        eth_node_url_entry.insert(0, 'https://x1-devnet.xen.network')
         contract_address_entry.delete(0, END)
-        contract_address_entry.insert(0, '0x726bB6aC9b74441Eb8FB52163e9014302D4249e5')
+        contract_address_entry.insert(0, '0xD342D63466B520d8D331CaFF863900d402Aa5b00')
         chain_id_entry.delete(0, END)
-        chain_id_entry.insert(0, '137')
+        chain_id_entry.insert(0, '202212')
     elif selected_network == 'Avalanche Mainnet':
         eth_node_url_entry.delete(0, END)
         eth_node_url_entry.insert(0, 'https://api.avax.network/ext/bc/C/rpc')
