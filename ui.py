@@ -82,7 +82,7 @@ def create_ui(send_transactions_callback, stop_transactions_callback, toggle_key
     network_label.grid(row=5, column=3, padx=padding_x, pady=padding_y)
 
     network_var = StringVar(root)
-    network_var.set('Ethereum')  # Set default value
+    network_var.set('Fastnet')  # Set default value
 
     networks = ['Fastnet', 'Devnet']  # Add more networks here if needed
     network_dropdown = OptionMenu(root, network_var, *networks)
