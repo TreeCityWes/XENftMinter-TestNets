@@ -164,7 +164,7 @@ def update_inputs(*args):
         eth_node_url_entry.delete(0, END)
         eth_node_url_entry.insert(0, 'https://x1-devnet.xen.network')
         contract_address_entry.delete(0, END)
-        contract_address_entry.insert(0, '0xD342D63466B520d8D331CaFF863900d402Aa5b00')
+        contract_address_entry.insert(0, '0xe9d00d1a70ab37b7902850e7f8b6bd432e1efe71')
         chain_id_entry.delete(0, END)
         chain_id_entry.insert(0, '202212')
     elif selected_network == 'Avalanche Mainnet':
